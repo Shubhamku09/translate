@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my site</title>
+    <link rel="stylesheet" media="screen and (max-width: 1200px )">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #navbar{
+            display: flex;
+            /* position: sticky; */
+            height: 100%;
+            width: 100%;
+            background-color: chartreuse;
+        }
+        /* #navbar::before{
+            content: "";
+            background-color: yellow;
+            position: absolute;
+            height: 90%;
+            width: 245%;
+            opacity: 0.7px;
+            z-index: -1;
+        } */
+        #navbar #logo img{
+            margin: 10px 15px; 
+            height: 60px;
+            width: 60px;
+        }
+        #navbar ul{
+            display: flex;
+            /* position: sticky; */
+            /* text-align: center; */
+        }
+        #navbar ul li{
+            list-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 4px;
+            /* text-align: center;
+            align-items: center;
+            justify-content: center; */
+        }
+        #navbar ul li a{
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px 4px;
+            border-radius: 20px;
+            color: rgb(2, 22, 18);
+        }
+        #navbar ul li a:hover{
+            color: rgb(228, 226, 220);
+            font-size: 24px;
+            background-color: rgb(236, 88, 88);
+        }
+        #home{
+            display: flex;
+            flex-direction: column;
+            margin: 100px 0px;
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            height: 210px;
+            color: rgb(12, 12, 12);
+        }
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 5%;
+            background: url("https://cdn.pixabay.com/photo/2021/07/18/18/38/waterfalls-6476336_960_720.jpg") no-repeat center center/cover;
+            width: 100%;
+            height: 22%;
+            opacity: .8;
+            z-index: -1;
+
+        }
+        .common{
+            display: block;
+            margin: auto;
+            /* text-align: center; */
+            font-size: 40px;
+            font-weight: bold;
+        }
+        #summary {
+            display: flex;
+        }
+        #summary .box{
+            border: 2px solid rgb(110, 110, 108);
+            border-radius: 10px;
+            padding: 15px 4px; 
+            margin: 8px;
+            text-align: center;
+        }
+        #summary .box img{
+            height: 300px;
+            width: 300px;
+            /* margin: 40px 2px; */
+            justify-content: center;
+        }
+        #summary .box p{
+            font-weight: bold;
+            padding-top: 20px;
+        }
+        #client{
+             display: flex; 
+             text-align: center;
+        }
+        #client::before{
+            content: "";
+            position: absolute;
+            background:url("https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg") no-repeat center center/cover;
+            height: 10%;
+            width: 100%;
+            opacity: .7;
+            z-index: -1;
+        }
+        #client img{
+            padding: 20px;
+            margin: 10px;
+            position: relative;
+            left: 30%;
+            bottom: 40%;
+            height: 130px;
+            width: 120px;
+            
+        }
+        .common{
+            display: block;
+            margin: auto;
+            text-align: center; 
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .box2 input{
+            font-size: 20px;
+            background-color: rgb(130, 155, 236);
+            width: 140px;
+        }
+        .box2 input:hover{
+            background-color: lawngreen;
+            font-size: 30px;
+        }
+        #contact{
+            text-align: center;
+             padding: 20px;
+            /* margin: 20px;  */
+        }
+        #contact::before{
+            content: "";
+            position: absolute;
+            left: 0%;
+            background: url("https://cdn.pixabay.com/photo/2021/09/08/18/00/flower-6607529_960_720.jpg") no-repeat center center/cover;
+            height: 27%;
+            width: 100%;
+            opacity: .7;
+            z-index: -1;
+        }
+        #contact input{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid rgb(243, 166, 166);
+        }
+        #search {
+            position: absolute;
+            top: 35px;
+            right: 30px;
+        }
+        #search input{
+            border-radius: 24px;
+            padding: 8px;
+            border: none;
+        }
+        #shyam{
+            position: absolute;
+            top: 30px;
+            right: 300px;
+            padding: 8px;
+            border: none;
+            border-radius: 24px;
+        }
+        #shyam input{
+            padding: 20px;
+            border: none;
+            border-radius: 24;
+        }
+        #shyam:hover{
+            color: rgb(161, 39, 23);
+        }
+        #search input:hover{
+            background-color: rgb(31, 73, 211);
+            font-size: 17px;
+        }
+        #fix{
+            position:fixed;
+            bottom: 5px;
+            right: 4px;
+            font-size: 30px;
+            background-color: rgb(22, 36, 231);
+            height: 50px;
+            width: 120px;
+            border-radius: 16px;
+        }
+        #fix:hover{
+            padding: 10px;
+            background-color: sienna;
+        }
+        #fix a{
+            text-decoration: none;
+            color: rgb(17, 17, 16);
+            font-size: 23px;
+            
+        }
+        footer{
+            height: 45px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width:1200px){
+            #navbar{
+                flex-direction: column;
+                background-color: none;
+                /* height: 70px; */
+            }
+            #navbar ul li a{
+                font-size: 1rem;
+                padding: 0px 7px;
+                /* padding-bottom: 8px; */
+            }
+            #home::before{
+                height: 60%;
+                width: 100%;
+            }
+            #summary {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            #client{
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+            }
+            #client::before{
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://www.logolynx.com/images/logolynx/de/dee2391c640785a6d12b8741d6cf73b4.jpeg" alt="logo">
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#client">Our Client</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h3>Hey,Welcome to my site</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, autem necessitatibus est velit commodi, animi aliquam obcaecati quasi quis facere perspiciatis reprehenderit sunt repudiandae rerum placeat dolore mollitia hic repellat.</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, commodi. Nihil, recusandae, quisquam, fugit non reprehenderit earum facilis dolore repudiandae exercitationem et sed quia quos iste ea quo! Nostrum, vero?</p>
+    </section>
+    <h1 class="common">Summary</h1>
+    <section id="summary">
+        
+        <div class="box">
+            <img src="https://cdn.pixabay.com/photo/2021/04/16/07/23/ao-dai-6182846_960_720.jpg" alt="">
+            <p>ipsum dolor sit amet consectetur adipisicing elit. Impedit incidunt laborum quod magni? At quaerat nulla eius eaque recusandae vitae.</p></div>
+        <div class="box">
+            <img src="https://cdn.pixabay.com/photo/2021/06/03/13/18/windmill-6307058_960_720.jpg" alt="">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis quasi inventore tenetur aliquid odit, magnam itaque at, quos veritatis recusandae accusamus assumenda error dolorum nostrum reprehenderit qui commodi ratione excepturi.</p></div>
+        <div class="box">
+            <img src="https://cdn.pixabay.com/photo/2021/08/27/10/16/baby-6578335_960_720.jpg" alt="">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem quod obcaecati eum corrupti nam alias labore laborum, esse accusantium repellendus maiores architecto suscipit?</p></div>
+        </section>
+    <h1 class="common">Our Client</h1>
+    <section id="client">
+        <img src="https://cdn.pixabay.com/photo/2015/05/14/22/21/logo-767610_960_720.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2017/10/09/19/03/logo-2834458_960_720.jpg" alt="">
+        <img src="https://media.istockphoto.com/photos/dell-computers-sign-picture-id533008105?s=612x612" alt="">
+    </section>
+    <h1 class="common">Contact us</h1>
+    <section id="contact">
+        <form action="">
+            <div class="box1">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Name">
+            </div>
+            <div class="box1">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email">
+            </div>
+            <div class="box1">
+                <label for="number">Number</label>
+                <input type="number" id="number" placeholder="Enter you number">
+            </div>
+            <div class="box1">
+                <label for="state">State</label>
+                <input type="text" id="state" placeholder="Enter your State">
+            </div>
+            <div class="box1">
+                <label for="message">Message</label>
+                <textarea name="description" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="box2">
+                <label for="submit"></label>
+                <input type="submit" placeholder="Submit me">
+            </div>
+        </form>
+    </section>
+    <div id="search">
+        <!-- <label for="searching">Search here</label> -->
+        <input type="search" id="searching" placeholder="search here">
+    </div>
+    <div id="shyam">
+        <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+    <div id="fix">
+        <a href="#" target="_blank">Chat with us</a>
+    </div>
+    <footer>Shubhamk352001@gmail.com</footer>
+
+</body>
+</html>
